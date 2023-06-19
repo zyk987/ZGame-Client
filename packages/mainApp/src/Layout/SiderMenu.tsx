@@ -1,8 +1,10 @@
 import { memo, useState } from "react";
-import { Layout, Menu, MenuProps } from "antd";
+import { Avatar, Card, Layout, Menu, MenuProps } from "antd";
 import { getItem } from "utils/antd";
 import { RouteOpts, routes } from "../routes";
 import { Link, useLocation } from "react-router-dom";
+import { SettingOutlined, UserOutlined } from "@ant-design/icons";
+import styles from "./sider.module.less";
 
 const { Sider } = Layout;
 
@@ -38,6 +40,25 @@ const SiderMenu: React.FC = () => {
         mode="inline"
         items={items}
       />
+      <div
+        style={{
+          position: "absolute",
+          bottom: "48px",
+          left: "50%",
+          transform: "translateX(-50%)",
+        }}
+        className={styles.user}
+      >
+        <div className={styles.head}>
+          <div className={styles.img}>
+            <UserOutlined />
+          </div>
+          <div className={styles.name}>未登录</div>
+        </div>
+        <div className={styles.setting}>
+          <SettingOutlined />
+        </div>
+      </div>
     </Sider>
   );
 };

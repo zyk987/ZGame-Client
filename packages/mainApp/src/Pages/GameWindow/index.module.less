@@ -6,16 +6,17 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  filter: drop-shadow(0 0 2em #33333349);
+  // filter: drop-shadow(0 0 2em #33333349);
   position: relative;
   .wave {
     position: absolute;
     bottom: 0;
     width: 100%;
     border-radius: 16px;
+    z-index: 0;
+    user-select: none;
   }
   .container {
-    z-index: 100;
     width: 100%;
     height: 100%;
   }

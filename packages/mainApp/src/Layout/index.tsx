@@ -16,7 +16,7 @@ const BaseLayout: React.FC<HomeProps> = (props) => {
     <ConfigProvider theme={publicTheme}>
       <Layout style={{ minHeight: "100vh" }}>
         <SiderMenu />
-        <Layout className="site-layout">
+        <Layout className={styles.contentLayout}>
           <Content className={styles.content}>{children}</Content>
         </Layout>
       </Layout>

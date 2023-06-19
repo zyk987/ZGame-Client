@@ -6,9 +6,9 @@ export const MicroApps = [
     activeRule: "/2048",
   },
   {
-    name: "vite-vue-app",
+    name: "reactorTower",
     entry: "//localhost:3002",
     container: "#container",
-    activeRule: "/vite-vue-app",
+    activeRule: "/reactor-tower",
   },
 ];

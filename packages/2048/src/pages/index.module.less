@@ -1,0 +1,224 @@
+.container {
+  color: #776e65;
+  background-color: #faf8ee;
+  height: calc(100vh - 64px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 16px;
+  user-select: none;
+  @media (max-width: 1200px) {
+    .hidden {
+      display: none;
+    }
+  }
+  .left {
+    height: 70vh;
+    width: 18vw;
+    z-index: 1;
+    .arrow {
+      width: 18vw;
+      height: 18vh;
+      display: flex;
+
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      .row {
+        width: 70%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .piece {
+        height: 7vh;
+        width: 7vh;
+        text-align: center;
+        line-height: 7vh;
+        opacity: 0.7;
+        border-radius: 1vh;
+        background-color: #bbada0;
+        color: #000;
+      }
+    }
+  }
+  .game {
+    background: #bbada0;
+    border-radius: 6px;
+    width: 70vh;
+    height: 70vh;
+    z-index: 1;
+    .chessboard {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .col {
+        width: 15vh;
+        height: 15vh;
+        border-radius: 5px;
+
+        box-sizing: border-box;
+        background: rgba(238, 228, 218, 0.35);
+        overflow: hidden;
+        position: absolute;
+        .cell {
+          font-size: 6vh;
+          font-weight: bold;
+          text-align: center;
+          border-radius: 5px;
+          line-height: 15vh;
+        }
+        @keyframes newCell {
+          from {
+            width: 7vh;
+            height: 7vh;
+            margin-top: 4vh;
+            margin-left: 4vh;
+            line-height: 7vh;
+          }
+          to {
+            width: 15vh;
+            height: 15vh;
+            margin-top: 0;
+            margin-left: 0;
+            line-height: 15vh;
+          }
+        }
+        .newCell {
+          animation: newCell 0.3s;
+        }
+        @keyframes combineCell {
+          0% {
+            width: 15vh;
+            height: 15vh;
+          }
+          50% {
+            width: 1vh;
+            height: 1vh;
+          }
+          100% {
+            width: 15vh;
+            height: 15vh;
+          }
+        }
+        .combineCell {
+          animation: combineCell 0.3s;
+        }
+        .cellTypeOf2 {
+          background: #eee4da;
+        }
+        .cellTypeOf4 {
+          background: #ede0c8;
+        }
+        .cellTypeOf8 {
+          color: #f9f6f2;
+          background: #f2b179;
+        }
+        .cellTypeOf16 {
+          color: #f9f6f2;
+          background: #f59563;
+        }
+        .cellTypeOf32 {
+          color: #f9f6f2;
+          background: #f67c5f;
+        }
+        .cellTypeOf64 {
+          color: #f9f6f2;
+          background: #f65e3b;
+        }
+        .cellTypeOf128 {
+          color: #f9f6f2;
+          background: #edcf72;
+        }
+        .cellTypeOf256 {
+          color: #f9f6f2;
+          background: #edcc61;
+        }
+        .cellTypeOf512 {
+          color: #f9f6f2;
+          background: #edc850;
+        }
+        .cellTypeOf1024 {
+          color: #f9f6f2;
+          background: #edc53f;
+        }
+        .cellTypeOf2048 {
+          color: #f9f6f2;
+          background: #edc22e;
+        }
+        .cellTypeOf4096 {
+          color: #f7fdfa;
+          background: #5eda92;
+        }
+        .cellTypeOf8192 {
+          color: #f7fdfa;
+          background: #24ba63;
+        }
+        .cellTypeOf16384 {
+          color: #f7fdfa;
+          background: #238d52;
+        }
+      }
+    }
+    .boardMask {
+      position: absolute;
+      top: calc(15vh - 32px);
+      z-index: 3;
+      background-color: rgba(255, 255, 255, 0.8);
+      width: 70vh;
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      .nowScore {
+        font-size: 5vh;
+        margin-bottom: 10px;
+      }
+      .msg {
+        font-weight: bold;
+        font-size: 7vh;
+      }
+    }
+  }
+  .right {
+    height: 50vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    .score {
+      width: 18vh;
+      height: 15vh;
+      padding-top: 3vh;
+      border-radius: 1vh;
+      opacity: 0.7;
+      background-color: #bbada0;
+      text-align: center;
+
+      .scoreTitle {
+        font-size: 4vh;
+        font-weight: bold;
+      }
+      .scoreNum {
+        font-size: 4vh;
+        color: #fff;
+        font-weight: bold;
+      }
+    }
+    .play {
+      font-size: 3vh;
+      background-color: #bbada0;
+      color: #fff;
+      border-radius: 1vh;
+      width: 18vh;
+      text-align: center;
+      height: 6vh;
+      line-height: 6vh;
+      font-weight: bold;
+    }
+  }
+}

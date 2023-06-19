@@ -4,7 +4,7 @@ import { createFromIconfontCN } from "@ant-design/icons";
 import GameWindow from "@/Pages/GameWindow";
 
 const IconFont = createFromIconfontCN({
-  scriptUrl: "//at.alicdn.com/t/c/font_3941644_g88dp1j4r4m.js",
+  scriptUrl: "//at.alicdn.com/t/c/font_3941644_p4fl7ortcej.js",
 });
 
 export type RouteOpts = {
@@ -22,8 +22,9 @@ export const routes: RouteOpts[] = [
     element: <GameWindow />,
   },
   {
-    path: "/vite-vue-app",
-    label: "VueApp",
+    path: "/reactor-tower",
+    label: "反应堆塔",
+    icon: <IconFont type="icon-stack" />,
     element: <GameWindow />,
   },
 ];

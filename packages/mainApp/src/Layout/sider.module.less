@@ -1,0 +1,48 @@
+.user {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  .head {
+    height: 44px;
+    width: 100px;
+    padding: 0 10px;
+    display: flex;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    &:hover {
+      background: rgba(0, 0, 0, 0.06);
+    }
+    .img {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      line-height: 26px;
+      text-align: center;
+    }
+    .name {
+      margin-left: 10px;
+      width: 70px;
+      overflow: hidden;
+      font-weight: 600;
+    }
+  }
+
+  .setting {
+    height: 44px;
+    width: 44px;
+    cursor: pointer;
+    line-height: 44px;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: auto;
+    &:hover {
+      background: rgba(0, 0, 0, 0.06);
+    }
+  }
+}
